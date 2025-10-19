@@ -1,0 +1,24 @@
+@use "tailwindcss";
+
+.c-button {
+  @apply
+    px-4
+    py-3
+    rounded-md
+    disabled:opacity-60
+    text-white
+    hover:opacity-80
+    border-0
+    cursor-pointer
+  ;
+
+  &--fill-primary {
+    @apply bg-black;
+  }
+  &--fill-accent {
+    @apply bg-red-500;
+  }
+  &--text {
+    @apply bg-transparent text-black;
+  }
+}

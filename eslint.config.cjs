@@ -23,7 +23,7 @@ module.exports = [
         ecmaVersion: 2020,
         sourceType: 'module',
         ecmaFeatures: { jsx: true },
-        // project: './tsconfig.json', // enable if you need type-aware rules
+        // project: './tsconfig.json',
       },
     },
     plugins: {

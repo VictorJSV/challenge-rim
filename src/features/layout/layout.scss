@@ -1,0 +1,8 @@
+@use "tailwindcss";
+
+.c-layout {
+  @apply flex flex-col min-h-screen;
+  &__header {
+    @apply bg-custom text-black p-4 text-center;
+  }
+}

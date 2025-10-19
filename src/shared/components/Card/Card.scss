@@ -1,0 +1,39 @@
+@use "tailwindcss";
+
+button.c-card {
+  @apply cursor-pointer;
+}
+.c-card {
+  @apply
+    rounded-xl
+    shadow-xl
+    border-0
+    bg-white
+    border-2
+    border-transparent
+    p-4
+    transition-all
+    relative
+  ;
+  &--active {
+    @apply border-black;
+    .c-card__icon {
+      @apply
+        bg-green-500
+      ;
+    }
+  }
+  &__icon {
+    @apply
+      absolute
+      top-2
+      right-2
+      text-white
+      border-black
+      border-1
+      h-5
+      w-5
+      rounded-full
+    ;
+  }
+}

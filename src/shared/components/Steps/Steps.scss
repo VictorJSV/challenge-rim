@@ -1,0 +1,24 @@
+@use "tailwindcss";
+.c-steps {
+  @apply flex justify-between;
+  &__item {
+    @apply flex justify-center items-center flex-1 gap-4 relative;
+    &--is-selected {
+      .c-steps__circle {
+        @apply bg-blue-600 text-white;
+      }
+      .c-steps__title {
+        @apply font-semibold text-blue-600;
+      }
+    }
+  }
+  &__circle {
+    @apply w-8 h-8 rounded-full border-2 border-gray-300 flex items-center justify-center;
+  }
+  &__title {
+    @apply text-sm text-gray-600 text-center;
+  }
+  &__marker {
+    @apply absolute left-0;
+  }
+}
