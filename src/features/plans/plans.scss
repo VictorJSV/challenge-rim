@@ -1,0 +1,21 @@
+@use "tailwindcss";
+
+.plans {
+  &__container {
+    @apply mx-auto p-6 max-w-3xl bg-white rounded-xl;
+    box-shadow: 0 8px 30px rgba(10, 20, 40, 0.06);
+  }
+  &__title {
+    @apply text-lg font-semibold mb-4;
+  }
+  &__selector {
+    @apply flex gap-3 mb-4;
+  }
+  &__list {
+    @apply grid grid-cols-3 gap-4;
+  }
+}
+
+.c-plans-list {
+
+}
