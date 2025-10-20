@@ -1,0 +1,12 @@
+.c-steps-bar {
+  @apply flex items-center gap-4;
+  &__label {
+    @apply text-xxs shrink-0 uppercase font-black;
+  }
+  &__container {
+    @apply w-full bg-neutral-400 rounded-full h-[0.375rem];
+  }
+  &__value {
+    @apply bg-blue-berry h-[0.375rem] rounded-full transition-all duration-300 ease-in-out;
+  }
+}

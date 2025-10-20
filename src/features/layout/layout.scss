@@ -3,7 +3,10 @@
   &__header {
     @apply text-black text-center;
   }
+  &__main {
+    @apply flex-grow;
+  }
   &__footer {
-    @apply bg-gray-100 text-white;
+    @apply bg-gray-100 text-white mt-28;
   }
 }

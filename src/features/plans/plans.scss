@@ -1,19 +1,28 @@
-.plans {
+.c-plans {
+  @apply mt-8 font-lato md:w-[58rem] md:mx-auto;
   &__container {
-    @apply mx-auto p-6 max-w-3xl bg-white rounded-xl;
-    box-shadow: 0 8px 30px rgba(10, 20, 40, 0.06);
+    @apply mb-10 md:w-[34rem] md:mx-auto md:mb-5 md:mt-[3.5rem];
+  }
+  &__back-container {
+    @apply hidden md:block;
   }
   &__title {
-    @apply text-lg font-semibold mb-4;
+    @apply font-bold text-2.5xl mb-2 md:text-4.5xl md:text-center md:tracking-[-0.038rem];
+  }
+  &__description {
+    @apply mb-8 md:text-center;
   }
   &__selector {
-    @apply flex gap-3 mb-4;
+    @apply grid grid-cols-1 gap-6 md:grid-cols-2;
   }
-  &__list {
-    @apply grid grid-cols-3 gap-4;
+  &__item {
+    @apply flex items-center mb-[0.625rem];
+  }
+  &__item-text {
+    @apply ml-2;
+  }
+  &__item-description {
+    @apply text-xs;
   }
 }
 
-.c-plans-list {
-
-}

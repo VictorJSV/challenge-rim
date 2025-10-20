@@ -1,6 +1,14 @@
-import React, { Children, PropsWithChildren, createContext, isValidElement, useContext } from 'react';
+import React, {
+  Children,
+  PropsWithChildren,
+  createContext,
+  isValidElement,
+  useContext,
+} from 'react';
 import './Steps.scss';
 import { classes } from '@src/shared/utils';
+import { ProgressBar } from './components/ProgressBar';
+import IconStepper from '@src/assets/svgs/icon-stepper.svg?react';
 
 interface StepsWrapperProps {
   Item: typeof StepsItem;
@@ -19,6 +27,7 @@ const StepContext = createContext<StepContextValue>({ index: 0, total: 0 });
 const Steps: React.FC<PropsWithChildren<StepsProps>> & StepsWrapperProps = ({ children, id }) => {
   const childrenArray = Children.toArray(children);
   const total = childrenArray.length;
+
   const items = childrenArray.map((step, index) => {
     if (isValidElement(step)) {
       return (
@@ -29,13 +38,20 @@ const Steps: React.FC<PropsWithChildren<StepsProps>> & StepsWrapperProps = ({ ch
     }
     return null;
   });
+
   return (
-    <ul className="c-steps" id={id}>
-      {items}
-    </ul>
+    <div className="c-steps">
+      <div className="c-steps__mobile">
+        <ProgressBar childrenArray={childrenArray} id={id} total={total} />
+      </div>
+      <div className="c-steps__desktop">
+        <ul className="c-steps__list" id={id}>
+          {items}
+        </ul>
+      </div>
+    </div>
   );
 };
-
 
 interface StepsItemProps {
   title: string;
@@ -49,7 +65,11 @@ const StepsItem = ({ title, isSelected }: StepsItemProps) => {
       className={classes('c-steps__item', isSelected && 'c-steps__item--is-selected')}
       aria-label={`Paso ${index}: ${title} de ${total}`}
     >
-      { index > 0 && <div className="c-steps__marker" aria-hidden>---</div> }
+      {index > 0 && (
+        <div className="c-steps__marker" aria-hidden>
+          <IconStepper />
+        </div>
+      )}
       <div className="c-steps__circle" aria-hidden>
         {index + 1}
       </div>

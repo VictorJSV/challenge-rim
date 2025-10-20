@@ -1,23 +1,42 @@
 .c-steps {
-  @apply flex justify-between;
+  &__mobile {
+    @apply block md:hidden;
+  }
+  &__desktop {
+    @apply hidden md:flex;
+  }
+  &__list {
+    @apply inline-flex justify-between md:mx-auto;
+  }
   &__item {
     @apply flex justify-center items-center flex-1 gap-4 relative;
     &--is-selected {
       .c-steps__circle {
-        @apply bg-blue-600 text-white;
+        @apply bg-blue-berry border-blue-berry text-white;
       }
       .c-steps__title {
-        @apply font-semibold text-blue-600;
+        @apply font-bold text-neutral-700;
       }
     }
   }
   &__circle {
-    @apply w-8 h-8 rounded-full border-2 border-gray-300 flex items-center justify-center;
+    @apply
+      w-8
+      h-8
+      rounded-full
+      border-2
+      border-neutral-600
+      text-neutral-600
+      flex
+      items-center
+      justify-center
+      shrink-0
+    ;
   }
   &__title {
-    @apply text-sm text-gray-600 text-center;
+    @apply text-base text-neutral-600 text-center shrink-0;
   }
   &__marker {
-    @apply absolute left-0;
+    @apply ml-4;
   }
 }

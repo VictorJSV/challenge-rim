@@ -1,0 +1,45 @@
+.c-plans-list {
+  @apply grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-8;
+  &__item {
+    @apply flex;
+    & .c-card {
+      @apply flex;
+    }
+  }
+  &__item-container {
+    @apply md:px-1 md:flex md:flex-col;
+    & .c-button {
+      @apply w-full;
+    }
+  }
+  &__item-tag {
+    @apply md:h-5 md:mb-2;
+  }
+  &__item-name-container {
+    @apply flex items-start justify-between;
+  }
+  &__item-name {
+    @apply text-2xl font-black md:mb-6;
+  }
+  &__item-text-plan {
+    @apply text-neutral-600 text-xs uppercase mt-[0.625rem] md:mt-0;
+  }
+  &__item-price {
+    @apply text-xl font-black;
+  }
+  &__item-line {
+    @apply border-neutral-400 w-full my-6;
+  }
+  &__item-benefit-container {
+    @apply flex gap-6 flex-col mb-10 md:list-disc md:pl-7 md:grow;
+  }
+  &__item-benefit {
+    @apply flex items-start md:list-item;
+  }
+  &__item-mark {
+    @apply shrink-0 md:hidden mt-1;
+  }
+  &__item-text {
+    @apply ml-2 text-base leading-7 md:ml-0;
+  }
+}

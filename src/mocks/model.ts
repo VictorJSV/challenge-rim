@@ -4,11 +4,13 @@ export interface UserDTO {
   birthDay: string;
 }
 
-export interface PlansDTO {
-  list: Array<{
-    name: string;
-    price: number;
-    description: string[];
-    age: number;
-  }>;
+export interface PlanDTO {
+  name: string;
+  price: number;
+  description: string[];
+  age: number;
+}
+
+export interface PlansListDTO {
+  list: Array<PlanDTO>;
 }

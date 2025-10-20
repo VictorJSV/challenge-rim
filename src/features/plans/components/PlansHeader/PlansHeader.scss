@@ -1,0 +1,12 @@
+.c-plans-header {
+  @apply md:bg-neutral-200 font-lato py-4 border-b border-neutral-400 md:border-b-0;
+  &__container {
+    @apply flex items-center gap-4;
+  }
+  &__back-button {
+    @apply block md:hidden;
+  }
+  &__steps {
+    @apply grow;
+  }
+}

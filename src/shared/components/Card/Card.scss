@@ -3,35 +3,40 @@ button.c-card {
 }
 .c-card {
   @apply
-    rounded-xl
-    shadow-xl
-    border-0
+    rounded-3xl
+    shadow-large
     bg-white
     border-2
     border-transparent
-    p-4
+    px-6
+    py-10
     transition-all
     relative
+    text-left
   ;
-  &--active {
-    @apply border-black;
+  &--is-active {
+    @apply border-neutral-700;
     .c-card__icon {
       @apply
-        bg-green-500
+        border-feedback-success
+        bg-feedback-success
       ;
     }
   }
   &__icon {
     @apply
       absolute
-      top-2
-      right-2
+      top-4
+      right-6
       text-white
-      border-black
+      border-neutral-500
       border
-      h-5
-      w-5
+      h-6
+      w-6
       rounded-full
+      flex
+      items-center
+      justify-center
     ;
   }
 }

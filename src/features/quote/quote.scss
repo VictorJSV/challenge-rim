@@ -1,5 +1,5 @@
 .c-quote {
-  @apply relative md:flex md:gap-32;
+  @apply relative md:flex md:gap-32 pt-8;
   &__image {
     @apply absolute right-0 top-[-1.875rem] w-[8.5rem] md:static md:w-fit md:h-fit;
   }
@@ -7,7 +7,7 @@
     @apply md:max-w-[22rem];
   }
   &__title {
-    @apply text-2xl font-bold mt-2 mb-[3.375rem] w-[11.75rem] md:w-auto md:mt-4 md:mb-2;
+    @apply text-2.5xl font-bold mt-2 mb-[3.375rem] w-[11.75rem] md:w-auto md:mt-4 md:mb-2;
   }
   &__divider {
     @apply border-gray-80 w-full md:hidden;

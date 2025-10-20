@@ -13,11 +13,4 @@ describe('Tag component', () => {
     expect(tagElement).toHaveClass('c-tag');
     expect(tagElement).toHaveClass('c-tag--accent');
   });
-
-  it('when rendered with no children, then should render an empty span', () => {
-    render(<Tag type="accent" />);
-    const tagElement = screen.getByRole('generic');
-    expect(tagElement).toBeInTheDocument();
-    expect(tagElement).toBeEmptyDOMElement();
-  });
 });

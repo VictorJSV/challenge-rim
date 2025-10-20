@@ -1,5 +1,5 @@
 import { http, HttpResponse } from 'msw';
-import { PlansDTO, UserDTO } from './model';
+import { PlansListDTO, UserDTO } from './model';
 
 export const handlers = [
   http.post<UserDTO>('/api/user', () => {
@@ -12,7 +12,7 @@ export const handlers = [
   }),
 
   http.get('/api/plans', () => {
-    const result: PlansDTO = {
+    const result: PlansListDTO = {
       list: [
         {
           name: 'Plan en Casa',
@@ -45,7 +45,7 @@ export const handlers = [
           age: 25,
         },
         {
-          name: 'Plan en Casa + Chequeo ',
+          name: 'Plan en Casa + Chequeo',
           price: 49,
           description: [
             'Un Chequeo preventivo general de manera presencial o virtual.',

@@ -1,6 +1,6 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
 import { axiosBaseQuery } from './axiosBaseQuery';
-import { PlansDTO, UserDTO } from '@src/mocks/model';
+import { PlansListDTO, UserDTO } from '@src/mocks/model';
 import { QuoteRequestModel } from '@src/models';
 
 export const apiSlice = createApi({
@@ -14,7 +14,7 @@ export const apiSlice = createApi({
         data: payload,
       }),
     }),
-    getPlans: builder.query<PlansDTO, void>({
+    getPlans: builder.query<PlansListDTO, void>({
       query: () => ({ url: '/plans', method: 'GET' }),
     }),
   }),

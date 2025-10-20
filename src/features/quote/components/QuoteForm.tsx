@@ -11,6 +11,7 @@ import Input from '@src/shared/components/Input/Input';
 import ErrorMessage from '@src/shared/components/ErrorMessage/ErrorMessage';
 import Checkbox from '@src/shared/components/Checkbox/Checkbox';
 import Button from '@src/shared/components/Button/Button';
+import { useEffect } from 'react';
 
 export const QuoteForm: React.FC = () => {
   const navigate = useNavigate();
@@ -19,7 +20,9 @@ export const QuoteForm: React.FC = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isDirty },
+    watch,
+    reset,
   } = useForm<FormValues>({
     resolver: yupResolver(schema),
     defaultValues: {
@@ -30,6 +33,13 @@ export const QuoteForm: React.FC = () => {
       acceptCom: false,
     },
   });
+  const watchDocType = watch('docType');
+
+  useEffect(() => {
+    if (isDirty) {
+      reset({ docType: watchDocType, docNumber: '', cell: '', acceptPrivacy: false, acceptCom: false });
+    }
+  }, [watchDocType]);
 
   const onSubmit = async (data: FormValues) => {
     try {
@@ -130,7 +140,7 @@ export const QuoteForm: React.FC = () => {
         </div>
       </div>
       <div className="c-quote-form__row">
-        <Button type="submit" variant="fill-primary" disabled={isLoading}>
+        <Button type="submit" variant="fill-primary" disabled={isLoading} size="xl">
           {isLoading ? 'Enviando...' : 'Cotiza Aquí'}
         </Button>
       </div>

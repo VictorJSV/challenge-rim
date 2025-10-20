@@ -13,7 +13,7 @@ const initialState: UserState = {
   cell: null,
   name: null,
   lastName: null,
-  birthDay: null
+  birthDay: null,
 }
 
 const userSlice = createSlice({

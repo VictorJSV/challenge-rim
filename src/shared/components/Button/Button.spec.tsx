@@ -11,13 +11,13 @@ describe('Button component', () => {
     render(<Button variant="fill-accent">Accent</Button>);
     const button = screen.getByRole('button');
     expect(button).toHaveClass('c-button');
-    expect(button).toHaveClass('c-button--fill-accent');
+    expect(button).toHaveClass('c-button--variant-fill-accent');
   });
 
   it('when using text variant, then applies text variant class', () => {
     render(<Button variant="text">Text</Button>);
     const button = screen.getByRole('button');
-    expect(button).toHaveClass('c-button--text');
+    expect(button).toHaveClass('c-button--variant-text');
   });
 
   it('when passing HTML props, then forwards them to button element', () => {

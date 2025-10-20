@@ -1,9 +1,6 @@
 .c-button {
   @apply
-    py-[1.125rem]
-    px-6
     font-bold
-    text-lg
     rounded-full
     disabled:opacity-60
     text-white
@@ -12,17 +9,25 @@
     cursor-pointer
     w-max
     md:text-xl
-    md:py-5
-    md:px-10
+    text-lg
+    flex
+    items-center
+    justify-center
+    gap-2
   ;
-
-  &--fill-primary {
+  &--variant-fill-primary {
     @apply bg-gray-100;
   }
-  &--fill-accent {
+  &--variant-fill-accent {
     @apply bg-red-500;
   }
-  &--text {
-    @apply bg-transparent;
+  &--variant-text {
+    @apply bg-transparent text-blue-berry text-lg;
+  }
+  &--size-xl {
+    @apply px-6 py-[1.125rem] md:py-5 md:px-10;
+  }
+  &--size-md {
+    @apply px-6 py-[0.875rem];
   }
 }
