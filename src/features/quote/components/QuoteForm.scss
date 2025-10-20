@@ -1,0 +1,21 @@
+.c-quote-form {
+  @apply flex flex-col gap-6;
+  &__inner {
+    @apply flex flex-col gap-4;
+  }
+  &__field-group {
+    @apply flex;
+    > *:first-child {
+      @apply basis-[140px];
+    }
+    > *:last-child {
+      @apply ml-[-1px];
+    }
+  }
+  &__row-politics {
+    @apply flex flex-col gap-4 pb-3 md:gap-3 md:pb-0;
+  }
+  &__link {
+    @apply font-semibold text-xs underline;
+  }
+}

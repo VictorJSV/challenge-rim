@@ -14,22 +14,24 @@ module.exports = {
     }, */
     screens: {
       'sm': '384px',
-      'md': '1120px',
+      'md': '1168px',
     },
     container: {
       center: true,
     },
     extend: {
-      /* screens: {
-        'sm': '384px',
-        //'md': '1120px',
-      }, */
+      backgroundImage: {
+        'aqua-lemon': 'linear-gradient(to right, #00F4E2, #00FF7F)',
+      },
       fontSize: {
+        xs: ['0.75rem', '1.25rem'],
+        sm: ['0.875rem', '1rem'],
         base: ['1rem', '1.25rem'],
         lg: ['1.125rem', '1.25rem'],
-        'text-3xl': ['2rem', '2.5rem'],
+        '2xl': ['1.75rem', '2.25rem'],
       },
       colors: {
+        'gray-60': '#5E6488',
         'gray-80': '#2B304E',
         'gray-100': '#03050F',
       }

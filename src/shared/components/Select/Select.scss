@@ -1,8 +1,8 @@
 .c-select {
-  @apply relative inline-block w-full h-full;
+  @apply relative inline-block w-full;
 
   &__label {
-    @apply block mb-1 font-medium text-gray-800;
+    @apply block mb-1 font-medium;
   }
   &__button {
     @apply
@@ -10,10 +10,9 @@
       h-full
       border
       border-solid
-      border-[#5E6488]
+      border-gray-60
       rounded-lg
-      px-3
-      py-2
+      p-4
       text-left
       cursor-pointer
       flex
@@ -21,6 +20,7 @@
       transition-colors
       duration-200
       outline-2
+      outline
       outline-transparent
     ;
     &:focus-visible {
@@ -46,7 +46,7 @@
     @apply flex-1;
   }
   &__arrow {
-    @apply text-black ml-2 text-lg;
+    @apply ml-2 text-lg;
   }
   &__listbox {
     @apply
@@ -57,6 +57,7 @@
       bg-white
       border
       border-t-0
+      border-gray-60
       rounded-b-lg
       shadow-md
       z-10
@@ -74,7 +75,6 @@
       items-center
       justify-between
       text-base
-      text-gray-800
       transition-colors;
     &--selected {
       @apply bg-blue-100;

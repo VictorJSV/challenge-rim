@@ -2,6 +2,7 @@ import React, { useState, useRef, forwardRef, useImperativeHandle, useEffect } f
 import './Select.scss';
 import { useClickOutside } from '@src/shared/hooks/useClickOutside';
 import { classes } from '@src/shared/utils';
+import IconDown from '@src/assets/svgs/icon-down.svg?react';
 
 export interface Option {
   value: string;
@@ -103,7 +104,7 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
         >
           <span className="c-select__value">{currentValue.label}</span>
           <span className="c-select__arrow" aria-hidden="true">
-            ▾
+            <IconDown />
           </span>
         </button>
         {isOpen && (

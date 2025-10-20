@@ -1,12 +1,19 @@
 .c-quote {
+  @apply relative md:flex md:gap-32;
+  &__image {
+    @apply absolute right-0 top-[-1.875rem] w-[8.5rem] md:static md:w-fit md:h-fit;
+  }
+  &__info {
+    @apply md:max-w-[22rem];
+  }
   &__title {
-    @apply text-3xl font-bold mb-4;
+    @apply text-2xl font-bold mt-2 mb-[3.375rem] w-[11.75rem] md:w-auto md:mt-4 md:mb-2;
   }
-  &__form {
-    @apply flex flex-col gap-3;
+  &__divider {
+    @apply border-gray-80 w-full md:hidden;
   }
-  &__row {
-    @apply flex flex-col;
+  &__description {
+    @apply text-sm font-semibold my-6 md:mt-0;
   }
 }
 

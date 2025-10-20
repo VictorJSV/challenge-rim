@@ -1,7 +1,9 @@
 .c-button {
   @apply
-    px-4
-    py-3
+    py-[1.125rem]
+    px-6
+    font-bold
+    text-lg
     rounded-full
     disabled:opacity-60
     text-white
@@ -9,15 +11,18 @@
     border-0
     cursor-pointer
     w-max
+    md:text-xl
+    md:py-5
+    md:px-10
   ;
 
   &--fill-primary {
-    @apply bg-black;
+    @apply bg-gray-100;
   }
   &--fill-accent {
     @apply bg-red-500;
   }
   &--text {
-    @apply bg-transparent text-black;
+    @apply bg-transparent;
   }
 }

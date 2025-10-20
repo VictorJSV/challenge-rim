@@ -3,7 +3,7 @@
     @apply absolute w-0 h-0 opacity-0 pointer-events-none;
   }
   &__input:checked + &__icon {
-    @apply bg-black;
+    @apply bg-gray-100;
   }
   &__input:checked + &__icon svg {
     @apply block;
@@ -16,19 +16,20 @@
   }
   &__icon {
     @apply
-      w-7
-      h-7
+      w-5
+      h-5
       flex
       items-center
       justify-center
       border
-      border-black
+      border-gray-100
       rounded
       transition-colors
       duration-150
       bg-white
       cursor-pointer
       outline-2
+      outline
       outline-transparent
       outline-offset-[-2px]
       ;
@@ -48,9 +49,9 @@
     @apply hidden w-4 h-4 text-white;
   }
   &__label {
-    @apply text-base flex items-center;
+    @apply text-sm flex items-center;
   }
   &__text {
-    @apply ml-2;
+    @apply ml-3;
   }
 }

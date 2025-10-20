@@ -1,3 +1,6 @@
 .c-tag {
-  @apply p-2 bg-green-50;
+  @apply inline-block py-0.5 px-2 text-xs font-bold rounded sm:text-sm;
+  &--accent {
+    @apply bg-aqua-lemon;
+  }
 }

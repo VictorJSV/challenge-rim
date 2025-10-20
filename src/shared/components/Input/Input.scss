@@ -2,12 +2,14 @@
   @apply
     border
     border-solid
-    border-[#5E6488]
+    border-gray-60
     duration-150
     rounded-md
-    p-2
+    py-2
+    px-4
     block
     outline-2
+    outline
     outline-transparent
     outline-offset-[-2px]
   ;
@@ -32,20 +34,17 @@
   &__label {
     @apply
       block
-      mb-1
-      font-medium
-      text-[#222222];
+      text-xs
+      font-normal
+      text-gray-60;
   }
   &__field {
     @apply
       font-normal
-      leading-7
       text-base
-      tracking-[0.0125rem]
       w-full
       bg-transparent
       border-none
-      text-[#03050F]
       p-0
       focus:outline-none;
   }
