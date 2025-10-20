@@ -1,15 +1,9 @@
-@use "tailwindcss";
-
-.quote {
-  &__container {
-    @apply mx-auto p-6 max-w-2xl bg-white rounded-xl sm:p-8;
-    box-shadow: 0 8px 30px rgba(10, 20, 40, 0.06);
-  }
+.c-quote {
   &__title {
-    @apply text-lg font-semibold mb-4;
+    @apply text-3xl font-bold mb-4;
   }
   &__form {
-    @apply flex flex-col gap-3 mt-4;
+    @apply flex flex-col gap-3;
   }
   &__row {
     @apply flex flex-col;

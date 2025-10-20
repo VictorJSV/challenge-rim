@@ -4,6 +4,7 @@ import { classes } from '@src/shared/utils';
 
 interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'className'> {
   type?: 'text' | 'number';
+  variant?: 'default' | 'outlined';
   alignToLeft?: boolean;
   label?: string;
   isError?: boolean;
@@ -11,10 +12,10 @@ interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, '
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ type = 'text', label, isError, alignToLeft, ...props }, ref) => {
+  ({ type = 'text', label, isError, alignToLeft, variant = 'default', ...props }, ref) => {
     return (
       <label
-        className={classes('c-input', alignToLeft && 'c-input--to-left')}
+        className={classes('c-input', alignToLeft && 'c-input--to-left', variant && `c-input--variant-${variant}`)}
         htmlFor={props.id}
       >
         {label && (

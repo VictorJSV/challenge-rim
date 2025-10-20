@@ -1,0 +1,7 @@
+.c-container {
+  @apply container grid grid-cols-4 gap-6 px-6;
+  &__inner {
+    @apply col-span-full;
+  }
+}
+

@@ -1,13 +1,10 @@
-@use "tailwindcss";
-
 .c-input {
   @apply
-    border-1
+    border
     border-solid
     border-[#5E6488]
     duration-150
     rounded-md
-    bg-white
     p-2
     block
     outline-2
@@ -25,6 +22,12 @@
   }
   &--to-left {
     @apply rounded-l-none;
+  }
+  &--variant-default {
+    @apply bg-white;
+  }
+  &--variant-outlined {
+    @apply bg-transparent;
   }
   &__label {
     @apply

@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #f5f7fb;
+}
+
+@layer base {
+  html {
+    font-family: "BR Sonoma", system-ui, sans-serif;
+  }
+}

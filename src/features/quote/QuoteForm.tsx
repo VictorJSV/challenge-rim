@@ -12,6 +12,8 @@ import Select from '@src/shared/components/Select/Select';
 import Checkbox from '@src/shared/components/Checkbox/Checkbox';
 import Tag from '@src/shared/components/Tag/Tag';
 import Button from '@src/shared/components/Button/Button';
+import familyImg from '@src/assets/images/family.png';
+import Container from '@src/shared/components/Container/Container';
 
 type FormValues = {
   docType: 'DNI' | 'CE';
@@ -84,88 +86,103 @@ const QuoteForm: React.FC = () => {
       alert('Error al cotizar');
     }
   };
-
+  /* max-w-[352px] */
   return (
-    <div className="quote__container">
-      <Tag type="accent">Seguro Salud Flexible</Tag>
-      <h1 className="quote__title">Creado para ti y tu familia</h1>
-      <form className="quote__form" onSubmit={handleSubmit(onSubmit)}>
-        <p>
-          Tú eliges cuánto pagar. Ingresa tus datos, cotiza y recibe nuestra asesoría, 100% online.
-        </p>
-        <div className="quote__row">
-          <div className="flex">
-            <div>
-              <Select
-                id="docType"
-                options={[
-                  { label: 'DNI', value: 'DNI' },
-                  { label: 'CE', value: 'CE' },
-                ]}
-                alignToRight
-                {...register('docType')}
-              />
+    <Container>
+      <div className="c-quote">
+        <div className=''>
+          <img className='inline' src={familyImg} alt="Familia de 3 miembros" width={480} height={560} />
+        </div>
+        <div className=''>
+          <Tag type="accent">Seguro Salud Flexible</Tag>
+          <h1 className="c-quote__title">Creado para ti y tu familia</h1>
+          <p className='text-sm font-semibold pb-6'>
+            Tú eliges cuánto pagar. Ingresa tus datos, cotiza y recibe nuestra asesoría, 100%
+            online.
+          </p>
+        </div>
+        <div className=''>
+          <form className="c-quote__form" onSubmit={handleSubmit(onSubmit)}>
+            <div className="c-quote__row">
+              <div className="flex">
+                <div>
+                  <Select
+                    id="docType"
+                    options={[
+                      { label: 'DNI', value: 'DNI' },
+                      { label: 'CE', value: 'CE' },
+                    ]}
+                    alignToRight
+                    variant="outlined"
+                    {...register('docType')}
+                  />
+                </div>
+                <div className="ml-[-1px] grow">
+                  <Input
+                    id="docNumber"
+                    label="Nro. de documento"
+                    isError={!!errors.docNumber}
+                    variant="outlined"
+                    alignToLeft
+                    aria-describedby={errors.docNumber && 'docNumberError'}
+                    {...register('docNumber')}
+                  />
+                </div>
+              </div>
+              {errors.docNumber && (
+                <ErrorMessage id="docNumberError">{errors.docNumber.message}</ErrorMessage>
+              )}
             </div>
-            <div className="ml-[-1px]">
+
+            <div className="c-quote__row">
               <Input
-                id="docNumber"
-                label="Nro. de documento"
-                isError={!!errors.docNumber}
-                alignToLeft
-                aria-describedby={errors.docNumber && 'docNumberError'}
-                {...register('docNumber')}
+                id="cellphone"
+                label="Celular"
+                isError={!!errors.cell}
+                variant="outlined"
+                aria-describedby={errors.cell && 'cellError'}
+                {...register('cell')}
               />
+              {errors.cell && <ErrorMessage id="cellError">{errors.cell.message}</ErrorMessage>}
             </div>
-          </div>
-          {errors.docNumber && (
-            <ErrorMessage id="docNumberError">{errors.docNumber.message}</ErrorMessage>
-          )}
-        </div>
 
-        <div className="quote__row">
-          <Input
-            id="cellphone"
-            label="Celular"
-            isError={!!errors.cell}
-            aria-describedby={errors.cell && 'cellError'}
-            {...register('cell')}
-          />
-          {errors.cell && <ErrorMessage id="cellError">{errors.cell.message}</ErrorMessage>}
-        </div>
+            <div className="c-quote__row">
+              <Checkbox
+                id="acceptPrivacy"
+                label="Acepto politica de privacidad"
+                isError={!!errors.acceptPrivacy}
+                variant="outlined"
+                aria-describedby="acceptPrivacyError"
+                {...register('acceptPrivacy')}
+              />
+              {errors.acceptPrivacy && (
+                <ErrorMessage id="acceptPrivacyError">{errors.acceptPrivacy.message}</ErrorMessage>
+              )}
+            </div>
 
-        <div className="quote__row">
-          <Checkbox
-            id="acceptPrivacy"
-            label="Acepto politica de privacidad"
-            isError={!!errors.acceptPrivacy}
-            aria-describedby="acceptPrivacyError"
-            {...register('acceptPrivacy')}
-          />
-          {errors.acceptPrivacy && (
-            <ErrorMessage id="acceptPrivacyError">{errors.acceptPrivacy.message}</ErrorMessage>
-          )}
-        </div>
+            <div className="c-quote__row">
+              <Checkbox
+                id="acceptCom"
+                label="Acepto Comercial"
+                isError={!!errors.acceptCom}
+                variant="outlined"
+                aria-describedby="acceptComError"
+                {...register('acceptCom')}
+              />
+              {errors.acceptCom && (
+                <ErrorMessage id="acceptComError">{errors.acceptCom.message}</ErrorMessage>
+              )}
+            </div>
 
-        <div className="quote__row">
-          <Checkbox
-            id="acceptCom"
-            label="Acepto Comercial"
-            isError={!!errors.acceptCom}
-            aria-describedby="acceptComError"
-            {...register('acceptCom')}
-          />
-          {errors.acceptCom && (
-            <ErrorMessage id="acceptComError">{errors.acceptCom.message}</ErrorMessage>
-          )}
+            <div className="c-quote__row">
+              <Button type="submit" variant="fill-primary" disabled={isLoading}>
+                {isLoading ? 'Enviando...' : 'Cotiza Aquí'}
+              </Button>
+            </div>
+          </form>
         </div>
-
-        <div className="quote__row">
-          <Button type="submit" variant="fill-primary" disabled={isLoading}>
-            {isLoading ? 'Enviando...' : 'Cotiza Aquí'}
-          </Button>
-        </div>
-      </form>
-    </div>
+      </div>
+    </Container>
   );
 };
 

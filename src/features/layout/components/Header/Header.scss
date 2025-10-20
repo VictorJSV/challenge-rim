@@ -1,0 +1,15 @@
+.c-header {
+  @apply h-[56px] md:h-[64px] flex items-center justify-between;
+  &__information {
+    @apply flex gap-4 items-center;
+  }
+  &__text{
+    @apply text-xs font-semibold hidden md:block;
+  }
+  &__phone-container {
+    @apply flex items-center gap-2;
+  }
+  &__phone {
+    @apply text-base md:text-lg font-bold;
+  }
+}

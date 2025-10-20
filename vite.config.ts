@@ -7,13 +7,13 @@ export default defineConfig({
   plugins: [react(), tsconfigPaths(), svgr()],
   resolve: {
     alias: {
-      '@styles': '/src/styles',
+      '@styles': '/src/assets/styles',
     }
   },
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "@styles/theme.scss" as *;`,
+        additionalData: `@use "@styles/global.scss" as *;`,
         quietDeps: true,
       },
       sass: {

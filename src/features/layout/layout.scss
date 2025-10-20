@@ -1,8 +1,9 @@
-@use "tailwindcss";
-
 .c-layout {
-  @apply flex flex-col min-h-screen;
+  @apply flex flex-col justify-between min-h-screen;
   &__header {
-    @apply bg-custom text-black p-4 text-center;
+    @apply text-black text-center;
+  }
+  &__footer {
+    @apply bg-gray-100 text-white;
   }
 }

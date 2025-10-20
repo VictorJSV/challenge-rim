@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import App from './App';
 import { store } from './store';
-import './styles/main.scss';
+import './assets/styles/main.scss';
 
 async function enableMocking() {
   /* if (process.env.NODE_ENV !== 'development') {

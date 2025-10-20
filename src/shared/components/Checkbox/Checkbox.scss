@@ -1,5 +1,3 @@
-@use "tailwindcss";
-
 .c-checkbox {
   &__input {
     @apply absolute w-0 h-0 opacity-0 pointer-events-none;
@@ -23,7 +21,7 @@
       flex
       items-center
       justify-center
-      border-1
+      border
       border-black
       rounded
       transition-colors
@@ -38,6 +36,12 @@
       @apply
         border-blue-600
         outline-blue-600;
+    }
+    &--variant-default {
+      @apply bg-white;
+    }
+    &--variant-outlined {
+      @apply bg-transparent;
     }
   }
   &__icon svg {

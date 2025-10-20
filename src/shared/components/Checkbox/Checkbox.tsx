@@ -1,15 +1,17 @@
 import { forwardRef, useRef, useImperativeHandle, useState } from 'react';
 import './Checkbox.scss';
+import { classes } from '@src/shared/utils';
 
 export interface CheckboxProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'className' | 'tabIndex'> {
   label: string;
   isError?: boolean;
   id: string;
+  variant?: 'default' | 'outlined';
 }
 
 const Checkbox: React.FC<CheckboxProps> = forwardRef<HTMLInputElement, CheckboxProps>(
-  ({ label, isError, id, disabled, ...rest }, ref) => {
+  ({ label, isError, id, disabled, variant = 'default', ...rest }, ref) => {
     const inputRef = useRef<HTMLInputElement>(null);
     const [checked, setChecked] = useState(!!rest.checked);
     useImperativeHandle(ref, () => inputRef.current || ({} as HTMLInputElement));
@@ -41,7 +43,10 @@ const Checkbox: React.FC<CheckboxProps> = forwardRef<HTMLInputElement, CheckboxP
             {...rest}
           />
           <div
-            className="c-checkbox__icon"
+            className={classes(
+              'c-checkbox__icon',
+              variant && `c-checkbox__icon--variant-${variant}`
+            )}
             tabIndex={0}
             role="checkbox"
             onKeyDown={handleKeyDown}

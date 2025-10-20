@@ -1,15 +1,14 @@
-@use "tailwindcss";
-
 .c-button {
   @apply
     px-4
     py-3
-    rounded-md
+    rounded-full
     disabled:opacity-60
     text-white
     hover:opacity-80
     border-0
     cursor-pointer
+    w-max
   ;
 
   &--fill-primary {

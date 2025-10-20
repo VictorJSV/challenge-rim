@@ -18,10 +18,11 @@ interface SelectProps
   isError?: boolean;
   id: string;
   alignToRight?: boolean;
+  variant?: 'default' | 'outlined';
 }
 
 const Select = forwardRef<HTMLSelectElement, SelectProps>(
-  ({ options, isError, label, id, disabled, alignToRight, ...props }, ref) => {
+  ({ options, isError, label, id, disabled, alignToRight, variant = 'default', ...props }, ref) => {
     const wrapperRef = useRef<HTMLDivElement>(null);
     const selectRef = useRef<HTMLSelectElement>(null);
     const value = selectRef.current?.value;
@@ -86,7 +87,8 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
           className={classes(
             'c-select__button',
             isOpen && 'c-select__button--open',
-            alignToRight && 'c-select__button--to-right'
+            alignToRight && 'c-select__button--to-right',
+            variant && `c-select__button--variant-${variant}`,
           )}
           role="combobox"
           aria-haspopup="listbox"

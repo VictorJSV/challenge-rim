@@ -1,5 +1,3 @@
-@use "tailwindcss";
-
 button.c-card {
   @apply cursor-pointer;
 }
@@ -30,7 +28,7 @@ button.c-card {
       right-2
       text-white
       border-black
-      border-1
+      border
       h-5
       w-5
       rounded-full
