@@ -1,6 +1,6 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
 import { axiosBaseQuery } from './axiosBaseQuery';
-import { PlansListDTO, UserDTO } from '@src/mocks/model';
+import { PlansListDTO, UserDTO } from '@src/__mocks__/msw/model';
 import { QuoteRequestModel } from '@src/models';
 
 export const apiSlice = createApi({

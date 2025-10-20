@@ -1,4 +1,4 @@
-import { PlanDTO, PlansListDTO } from '@src/mocks/model';
+import { PlanDTO, PlansListDTO } from '@src/__mocks__/msw/model';
 import { markBoldWords } from '@src/shared/utils';
 import Card from '@src/shared/components/Card/Card';
 import GlMedicalAttentionSolid from '@src/assets/svgs/GlMedicalAttentionSolid.svg?react';
@@ -22,9 +22,9 @@ const ConfigBold = [
     if: 'Plan en Casa y Clínica',
     then: [ [0, 2], [0, 2], [3, 8] ],
   },
-  { 
-    if: 'Plan en Casa + Chequeo', 
-    then: [[0, 3], [2, 3], 'all'] 
+  {
+    if: 'Plan en Casa + Chequeo',
+    then: [[0, 3], [2, 3], 'all']
   },
 ];
 
