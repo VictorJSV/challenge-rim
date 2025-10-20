@@ -92,15 +92,15 @@ export const PlanList: React.FC<PlanListProps> = ({ planType, data, isLoading, i
                   {plan.icon}
                 </div>
                 <p className="c-plans-list__item-text-plan">Costo del plan</p>
-                <p className="c-plans-list__item-price">${plan.price} al mes</p>
+                <p className="c-plans-list__item-price">{`$${plan.price} al mes`}</p>
                 <hr className="c-plans-list__item-line" />
                 <ul className="c-plans-list__item-benefit-container">
                   {plan.description.map((benefit, j) => (
-                    <li key={j} className="c-plans-list__item-benefit">
+                    <li key={j} className="c-plans-list__item-benefit" aria-label={benefit.text}>
                       {j === 0 && <GlMedicalAttentionSolid className="c-plans-list__item-mark" />}
                       {j === 1 && <GlLaptopSolid className="c-plans-list__item-mark" />}
                       {j === 2 && <GlHospitalSolid className="c-plans-list__item-mark" />}
-                      <p className="c-plans-list__item-text">
+                      <p className="c-plans-list__item-text" aria-hidden="true">
                         {markBoldWords(benefit.text, benefit.toBold)}
                       </p>
                     </li>

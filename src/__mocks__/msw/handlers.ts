@@ -1,8 +1,10 @@
 import { http, HttpResponse } from 'msw';
 import { PlansListDTO, UserDTO } from './model';
 
+const ENDPOINT = 'https://rimac-front-end-challenge.netlify.app/api';
+
 export const handlers = [
-  http.post<UserDTO>('/api/user', () => {
+  http.post<UserDTO>(`${ENDPOINT}/user.json`, () => {
     const result: UserDTO = {
       name: 'Rocío',
       lastName: 'Miranda Díaz',
@@ -11,7 +13,7 @@ export const handlers = [
     return HttpResponse.json(result);
   }),
 
-  http.get('/api/plans', () => {
+  http.get(`${ENDPOINT}/plans.json`, () => {
     const result: PlansListDTO = {
       list: [
         {

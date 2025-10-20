@@ -6,9 +6,9 @@ import { store } from './store';
 import './assets/styles/main.scss';
 
 async function enableMocking() {
-  /* if (process.env.NODE_ENV !== 'development') {
+  if (import.meta.env.MODE !== 'other') {
     return
-  } */
+  }
   const { worker } = await import('./__mocks__/msw/browser')
   return worker.start()
 }

@@ -32,9 +32,9 @@ const Summary: React.FC = () => {
           <Card>
             <p className="c-summary__price-label"> Precios calculados para: </p>
             <div className="c-summary__person-container">
-              <IconFamily />
+              <IconFamily aria-hidden="true" />
               <p className="c-summary__person-name">
-                {user.name} {user.lastName}
+                {`${user.name} ${user.lastName}`}
               </p>
             </div>
             <hr className="c-summary__divider" />
