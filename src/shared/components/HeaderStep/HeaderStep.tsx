@@ -2,9 +2,9 @@ import Steps from "@src/shared/components/Steps/Steps";
 import IconBack from '@src/assets/svgs/icon-back.svg?react';
 import Button from "@src/shared/components/Button/Button";
 import Container from "@src/shared/components/Container/Container";
-import './PlansHeader.scss';
+import './HeaderStep.scss';
 
-export const PlansHeader = () => {
+export const HeaderStep = ({ numberSelected }: { numberSelected: number }) => {
   return (
     <div className="c-plans-header">
       <Container>
@@ -20,8 +20,8 @@ export const PlansHeader = () => {
           </div>
           <div className="c-plans-header__steps">
             <Steps id="plan-selection-steps">
-              <Steps.Item title="Planes y coberturas" isSelected />
-              <Steps.Item title="Resumen" />
+              <Steps.Item title="Planes y coberturas" isSelected={numberSelected === 1} />
+              <Steps.Item title="Resumen" isSelected={numberSelected === 2} />
             </Steps>
           </div>
         </div>

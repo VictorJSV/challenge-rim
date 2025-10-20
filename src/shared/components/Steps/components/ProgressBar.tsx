@@ -17,7 +17,7 @@ export const ProgressBar = ({ childrenArray, id, total }: ProgressBarProps) => {
   const progressPercentage = ((currentStep + 1) / total) * 100;
   return (
     <div className="c-steps-bar" role="region">
-      <span className="c-steps-bar__label" id={`${id}BarLabel`}>
+      <span className="c-steps-bar__label" id={`${id}BarLabel`} aria-hidden="true">
         Paso {currentStep + 1} de {total}
       </span>
       <div

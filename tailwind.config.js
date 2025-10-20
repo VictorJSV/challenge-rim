@@ -33,6 +33,7 @@ module.exports = {
         base: ['1rem', '1.25rem'],
         lg: ['1.125rem', '1.25rem'],
         '2.5xl': ['1.75rem', '2.25rem'],
+        '3.5xl': ['2rem', '2.5rem'],
         '4.5xl': ['2.5rem', '3rem'],
       },
       colors: {

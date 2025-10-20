@@ -10,7 +10,7 @@ import IcAddUserLight from '@src/assets/svgs/IcAddUserLight.svg?react';
 import IconBack from '@src/assets/svgs/icon-back.svg?react';
 import { PlanList } from './components/PlansList/PlansList';
 import { useGetPlansQuery } from '@src/services/api';
-import { PlansHeader } from './components/PlansHeader/PlansHeader';
+import { HeaderStep } from '@src/shared/components/HeaderStep/HeaderStep';
 
 const Plans: React.FC = () => {
   const user = useAppSelector((s) => s.user);
@@ -19,7 +19,7 @@ const Plans: React.FC = () => {
 
   return (
     <>
-      <PlansHeader />
+      <HeaderStep numberSelected={1} />
       <Container>
         <div className="c-plans">
           <div className="c-plans__back-container">

@@ -1,7 +1,7 @@
 .c-plans {
-  @apply mt-8 font-lato md:w-[58rem] md:mx-auto;
+  @apply mt-8 font-lato md:max-w-[58rem] md:mx-auto;
   &__container {
-    @apply mb-10 md:w-[34rem] md:mx-auto md:mb-5 md:mt-[3.5rem];
+    @apply mb-10 md:max-w-[34rem] md:mx-auto md:mb-5 md:mt-[3.5rem];
   }
   &__back-container {
     @apply hidden md:block;

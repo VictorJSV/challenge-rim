@@ -10,17 +10,24 @@ interface CardProps {
 }
 
 const Card = (
-  { children, type, onClick, isActive }: PropsWithChildren<CardProps> = { type: 'default', onClick: () => {} }
+  { children, type, onClick, isActive }: PropsWithChildren<CardProps> = {
+    type: 'default',
+    onClick: () => {},
+  }
 ) => {
   if (type === 'button') {
     return (
-      <button className={classes('c-card', isActive && 'c-card--is-active')} onClick={onClick}>
+      <button
+        className={classes('c-card', isActive && 'c-card--is-active')}
+        onClick={onClick}
+        aria-description={`Opción ${isActive ? 'seleccionada' : 'no seleccionada'}`}
+      >
         <div className="c-card__icon"> {isActive && <IconCheck />} </div>
         {children}
       </button>
     );
   }
-  return <div className={classes('c-card', isActive && 'c-card--is-active')} >{children}</div>;
+  return <div className={classes('c-card', isActive && 'c-card--is-active')}>{children}</div>;
 };
 
 export default Card;

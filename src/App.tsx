@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Quote from './features/quote/Quote';
 import Plans from './features/plans/Plans';
-import QuoteSummary from './features/resume/QuoteSummary';
+import QuoteSummary from './features/summary/Summary';
 import Layout from './features/layout/Layout';
 
 export default function App() {
