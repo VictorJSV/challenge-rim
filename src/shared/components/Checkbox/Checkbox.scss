@@ -52,6 +52,6 @@
     @apply text-sm flex items-center;
   }
   &__text {
-    @apply ml-3;
+    @apply ml-3 leading-6	md:leading-5 md:text-xs;
   }
 }

@@ -25,7 +25,7 @@
     @apply bg-transparent text-blue-berry text-lg;
   }
   &--size-xl {
-    @apply px-6 py-[1.125rem] md:py-5 md:px-10;
+    @apply px-6 py-[1.125rem] md:leading-6 md:py-5 md:px-10 md:text-xl;
   }
   &--size-md {
     @apply px-6 py-[0.875rem];

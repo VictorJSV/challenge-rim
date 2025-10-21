@@ -1,17 +1,11 @@
 import { PlanDTO, PlansListDTO } from '@src/__mocks__/msw/model';
 import IcHomeLight from '@src/assets/svgs/IcHomeLight.svg?react';
 import IcHospitalLight from '@src/assets/svgs/IcHospitalLight.svg?react';
-import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectUserAge } from '../../selectors/plans.selectors';
 import './PlansList.scss';
 import Carousel from '@src/shared/components/Carousel/Carousel';
 import { PlansItem } from '../PlansItem/PlansItem';
-
-const items = Array.from({ length: 3 }).map((_, i) => ({
-  id: i,
-  src: `https://picsum.photos/288?idx=${i}`,
-}));
 
 const ConfigBold = [
   {
@@ -65,7 +59,12 @@ export const PlanList: React.FC<PlanListProps> = ({ planType, data, isLoading, i
               ...plan,
               price: plan.price * (planType === 'self' ? 1 : 0.95),
               recommended: plan.name === 'Plan en Casa y Clínica',
-              icon: plan.name === 'Plan en Casa y Clínica' ? <IcHospitalLight /> : <IcHomeLight />,
+              icon:
+                plan.name === 'Plan en Casa y Clínica' ? (
+                  <IcHospitalLight className="shrink-0" />
+                ) : (
+                  <IcHomeLight className="shrink-0" />
+                ),
               description: plan.description.map((text, j) => ({
                 text,
                 toBold: (config?.then[j] ?? []) as number[] | 'all',
@@ -83,7 +82,7 @@ export const PlanList: React.FC<PlanListProps> = ({ planType, data, isLoading, i
         <Carousel>
           {enhancedList().map((plan, i) => (
             <Carousel.Item key={i} index={i} width="304px">
-              <div className='pl-4 py-6 flex md:pt-5 md:pb-0 md:pl-0'>
+              <div className="pl-4 py-6 flex md:pt-5 md:pb-0 md:pl-0">
                 <PlansItem key={i} plan={plan} />
               </div>
             </Carousel.Item>

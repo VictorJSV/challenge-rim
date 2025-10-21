@@ -19,7 +19,7 @@
     @apply text-2xl font-black md:mb-6;
   }
   &__text-plan {
-    @apply text-neutral-600 text-xs uppercase mt-[0.625rem] md:mt-0;
+    @apply text-neutral-600 text-xs tracking-[0.038rem] uppercase mt-[0.625rem] md:mt-0;
   }
   &__price {
     @apply text-xl font-black;

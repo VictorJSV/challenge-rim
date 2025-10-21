@@ -1,7 +1,7 @@
 .c-steps-bar {
   @apply flex items-center gap-4;
   &__label {
-    @apply text-xxs shrink-0 uppercase font-black;
+    @apply text-xxs shrink-0 uppercase font-black tracking-wider;
   }
   &__container {
     @apply w-full bg-neutral-400 rounded-full h-[0.375rem];

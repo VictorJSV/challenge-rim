@@ -5,7 +5,7 @@
   &__body {
     @apply md:mt-[4rem] font-lato md:max-w-[58rem] md:mx-auto;
     .c-card {
-      @apply py-6 px-8 md:p-10;
+      @apply py-6 px-8;
     }
   }
   &__back {
@@ -15,7 +15,7 @@
     @apply mt-8 mb-10 text-3.5xl font-bold text-center md:text-4.5xl md:text-left;
   }
   &__price-label {
-    @apply font-black text-xxs uppercase;
+    @apply font-black text-xxs uppercase tracking-wider text-neutral-700;
   }
   &__person-container {
     @apply flex items-center gap-3 mt-2 mb-[1.125rem];

@@ -52,8 +52,8 @@ const Plans: React.FC = () => {
                   onClick={() => setPlanType('self')}
                 >
                   <div className="c-plans__item">
-                    <IcProtectionLight />
-                    <p className="c-plans__item-text">Para mi</p>
+                    <IcProtectionLight className="c-plans__item-icon" />
+                    <h2 className="c-plans__item-text">Para mi</h2>
                   </div>
                   <p className="c-plans__item-description">
                     Cotiza tu seguro de salud y agrega familiares si así lo deseas.
@@ -67,8 +67,8 @@ const Plans: React.FC = () => {
                   onClick={() => setPlanType('other')}
                 >
                   <div className="c-plans__item">
-                    <IcAddUserLight />
-                    <p className="c-plans__item-text">Para alguien más</p>
+                    <IcAddUserLight className="c-plans__item-icon" />
+                    <h2 className="c-plans__item-text">Para alguien más</h2>
                   </div>
                   <p className="c-plans__item-description">
                     Realiza una cotización para uno de tus familiares o cualquier persona.

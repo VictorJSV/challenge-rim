@@ -1,5 +1,5 @@
 .c-container {
-  @apply container grid grid-cols-4 gap-6 px-6 md:grid-cols-12;
+  @apply container grid grid-cols-4 gap-4 px-6 md:grid-cols-12 md:gap-[1.875rem];
   &__inner {
     @apply col-span-full;
   }

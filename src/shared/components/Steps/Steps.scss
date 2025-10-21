@@ -21,16 +21,17 @@
   }
   &__circle {
     @apply
-      w-8
-      h-8
+      w-6
+      h-6
       rounded-full
-      border-2
+      border-[0.063rem]
       border-neutral-600
       text-neutral-600
       flex
       items-center
       justify-center
       shrink-0
+      text-xs
     ;
   }
   &__title {

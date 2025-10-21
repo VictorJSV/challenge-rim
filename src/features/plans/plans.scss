@@ -13,13 +13,16 @@
     @apply mb-8 md:text-center;
   }
   &__selector {
-    @apply grid grid-cols-1 gap-6 md:grid-cols-2;
+    @apply grid grid-cols-1 gap-4 md:gap-[1.875rem] md:grid-cols-2;
   }
   &__item {
-    @apply flex items-center mb-[0.625rem];
+    @apply flex items-center mb-[0.625rem] md:mb-2 md:block;
+  }
+  &__item-icon {
+    @apply w-8 h-8 md:w-auto md:h-auto;
   }
   &__item-text {
-    @apply ml-2;
+    @apply ml-2 text-xl font-black md:ml-0 md:mt-2;
   }
   &__item-description {
     @apply text-xs;

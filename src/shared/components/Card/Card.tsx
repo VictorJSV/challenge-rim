@@ -18,7 +18,7 @@ const Card = (
   if (type === 'button') {
     return (
       <button
-        className={classes('c-card', isActive && 'c-card--is-active')}
+        className={classes('c-card c-card--button', isActive && 'c-card--is-active')}
         onClick={onClick}
         aria-description={`Opción ${isActive ? 'seleccionada' : 'no seleccionada'}`}
       >

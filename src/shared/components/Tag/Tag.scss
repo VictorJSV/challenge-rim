@@ -1,5 +1,5 @@
 .c-tag {
-  @apply inline-block py-0.5 px-2 text-xs font-bold rounded sm:text-sm;
+  @apply inline-block py-0.5 px-2 text-xs font-bold rounded md:text-sm md:py-1;
   &--accent {
     @apply bg-aqua-lemon;
   }
