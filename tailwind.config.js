@@ -43,6 +43,7 @@ module.exports = {
         'neutral-500': '#A9AFD9',
         'neutral-600': '#7981B2',
         'neutral-700': '#141938',
+        'gray-30': '#CCD1EE',
         'gray-60': '#5E6488',
         'gray-80': '#2B304E',
         'gray-100': '#03050F',

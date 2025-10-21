@@ -12,4 +12,10 @@ module.exports = {
   testEnvironmentOptions: {
     customExportConditions: [''],
   },
+  transform: {
+    '^.+\\.(ts|tsx)$': 'ts-jest',
+  },
+  transformIgnorePatterns: [
+    'node_modules/(?!dayjs)',
+  ],
 };

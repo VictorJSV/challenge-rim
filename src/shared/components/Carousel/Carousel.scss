@@ -1,0 +1,22 @@
+.c-carousel {
+  &__scroll {
+    @apply relative flex overflow-auto pr-5;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  &__item {
+    @apply flex-shrink-0;
+    &--snap-point {
+      scroll-snap-align: start;
+    }
+  }
+  &__controls {
+    @apply flex justify-center items-center gap-4 md:hidden;
+  }
+  &__button {
+    @apply scale-125;
+    &--next {
+      @apply rotate-180;
+    }
+  }
+}

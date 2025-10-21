@@ -110,7 +110,7 @@ export const QuoteForm: React.FC = () => {
         <div className="c-quote-form__row">
           <Checkbox
             id="acceptPrivacy"
-            label="Acepto politica de privacidad"
+            label="Acepto política de privacidad"
             isError={!!errors.acceptPrivacy}
             variant="outlined"
             aria-describedby="acceptPrivacyError"

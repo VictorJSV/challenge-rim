@@ -17,7 +17,7 @@ describe('Checkbox component', () => {
   });
 
   it('when checked prop is true, then input is checked', () => {
-    const { getByRole } = render(<Checkbox {...defaultProps} checked />);
+    const { getByRole } = render(<Checkbox {...defaultProps} readOnly checked />);
     const input = getByRole('checkbox');
     expect(input).toHaveAttribute('aria-checked', 'true');
   });

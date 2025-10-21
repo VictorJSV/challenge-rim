@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAppSelector } from '../../storeHooks';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Navigate } from 'react-router-dom';
 import Button from '@src/shared/components/Button/Button';
 import Card from '@src/shared/components/Card/Card';
 import { HeaderStep } from '@src/shared/components/HeaderStep/HeaderStep';
@@ -12,6 +12,16 @@ import './Summary.scss';
 const Summary: React.FC = () => {
   const { state } = useLocation();
   const user = useAppSelector((s) => s.user);
+
+  if (!state || !user.name) {
+    return (
+      <Container>
+        <div className="text-md text-center mt-4">
+          Redirigiendo... <Navigate to="/" replace />
+        </div>
+      </Container>
+    );
+  }
 
   return (
     <div className="c-summary">
@@ -54,8 +64,8 @@ const Summary: React.FC = () => {
               Plan elegido
             </h2>
             <ul className="c-summary__plan-list" aria-labelledby="summaryPlan">
-              <li>{state.plan.name}</li>
-              <li>Costo del plan: ${state.plan.price} al mes</li>
+              <li>{state?.plan.name}</li>
+              <li>Costo del plan: ${state?.plan.price} al mes</li>
             </ul>
           </Card>
         </div>

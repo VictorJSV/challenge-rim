@@ -24,6 +24,7 @@
     "react-hook-form": "^7.65.0",
     "react-redux": "^8.1.1",
     "react-router-dom": "^7.9.4",
+    "react-snap-carousel": "^0.5.1",
     "yup": "^1.7.1"
   },
   "devDependencies": {

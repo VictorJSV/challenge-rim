@@ -1,5 +1,8 @@
 .c-quote-form {
   @apply flex flex-col gap-6;
+  .c-button {
+    @apply w-full md:max-w-fit;
+  }
   &__inner {
     @apply flex flex-col gap-4;
   }

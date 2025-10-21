@@ -11,11 +11,22 @@ import IconBack from '@src/assets/svgs/icon-back.svg?react';
 import { PlanList } from './components/PlansList/PlansList';
 import { useGetPlansQuery } from '@src/services/api';
 import { HeaderStep } from '@src/shared/components/HeaderStep/HeaderStep';
+import { Navigate } from 'react-router-dom';
 
 const Plans: React.FC = () => {
   const user = useAppSelector((s) => s.user);
   const [planType, setPlanType] = useState<'self' | 'other'>();
   const { data, isLoading, isError } = useGetPlansQuery();
+
+  if (!user.name) {
+    return (
+      <Container>
+        <div className="text-2.5xl text-center mt-4">
+          Redirigiendo... <Navigate to="/" replace />
+        </div>
+      </Container>
+    );
+  }
 
   return (
     <>
@@ -23,18 +34,13 @@ const Plans: React.FC = () => {
       <Container>
         <div className="c-plans">
           <div className="c-plans__back-container">
-            <Button
-              variant="text"
-              onClick={() => window.history.back()}
-            >
+            <Button variant="text" onClick={() => window.history.back()}>
               <IconBack />
               Volver
             </Button>
           </div>
           <div className="c-plans__container">
-            <h1 className="c-plans__title">
-              {user.name} ¿Para quién deseas cotizar?
-            </h1>
+            <h1 className="c-plans__title">{user.name} ¿Para quién deseas cotizar?</h1>
             <p className="c-plans__description">
               Selecciona la opción que se ajuste más a tus necesidades.
             </p>
@@ -71,7 +77,9 @@ const Plans: React.FC = () => {
               </li>
             </ul>
           </div>
-          {planType && <PlanList planType={planType} data={data} isLoading={isLoading} isError={isError} />}
+          {planType && (
+            <PlanList planType={planType} data={data} isLoading={isLoading} isError={isError} />
+          )}
         </div>
       </Container>
     </>
