@@ -4,6 +4,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
+  base: '/challenge-rim/',
   plugins: [react(), tsconfigPaths(), svgr()],
   resolve: {
     alias: {

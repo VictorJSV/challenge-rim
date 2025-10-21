@@ -7,7 +7,7 @@ import Layout from './features/layout/Layout';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Layout>
         <Suspense fallback={<div>Cargando...</div>}>
           <Routes>
