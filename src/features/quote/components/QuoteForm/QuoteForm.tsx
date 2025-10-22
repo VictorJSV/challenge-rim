@@ -1,10 +1,10 @@
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import { FormValues, schema } from '../schemes';
+import { FormValues, schema } from '../../schemes';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useQuoteMutation } from '@src/services/api';
 import { useAppDispatch } from '@src/storeHooks';
-import { setUserData } from '../../../shared/slices/userSlice';
+import { setUserData } from '../../../../shared/slices/userSlice';
 import './QuoteForm.scss';
 import Select from '@src/shared/components/Select/Select';
 import Input from '@src/shared/components/Input/Input';

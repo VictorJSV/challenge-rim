@@ -4,9 +4,9 @@
     @apply text-black text-center;
   }
   &__main {
-    @apply flex-grow;
+    @apply flex-grow pb-28 relative;
   }
   &__footer {
-    @apply bg-gray-100 text-white mt-28;
+    @apply bg-gray-100 text-white;
   }
 }

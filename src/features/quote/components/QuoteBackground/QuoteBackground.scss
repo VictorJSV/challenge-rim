@@ -1,0 +1,15 @@
+.c-quote-background__right {
+  @apply absolute right-0 top-[-4rem] z-[-1] hidden md:block;
+}
+
+.c-quote-background__left {
+  @apply absolute left-0 bottom-0 z-[-1] hidden md:block;
+}
+
+.c-quote-background__mobile-right {
+  @apply absolute right-0 top-[-3.5rem] z-[-1] block md:hidden;
+}
+
+.c-quote-background__mobile-left {
+  @apply absolute left-0 bottom-0 z-[-1] block md:hidden;
+}

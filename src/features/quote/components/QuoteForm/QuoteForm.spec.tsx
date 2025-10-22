@@ -1,5 +1,5 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { QuoteForm } from './QuoteForm';
+import { QuoteForm } from '../QuoteForm';
 import { BrowserRouter } from 'react-router-dom';
 
 const mockDispatch = jest.fn();
