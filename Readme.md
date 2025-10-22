@@ -12,3 +12,7 @@ npm run dev
 ```
 npm test
 ```
+
+## Visualizar el proyecto en vivo
+
+https://victorjsv.github.io/challenge-rim/
