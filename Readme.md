@@ -7,7 +7,7 @@ Para este desafío he utilizado React, Typescript, Redux Toolkit Query, Jest con
 npm run dev
 ```
 
-## Inicialiazr los test
+## Inicializar los test
 
 ```
 npm test
