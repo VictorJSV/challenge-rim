@@ -29,6 +29,7 @@ export const PlansItem = ({ plan }: { plan: EnhancedPlan }) => {
             {plan.icon}
           </div>
           <p className="c-plans-item__text-plan">Costo del plan</p>
+          { plan.prevPrice && <p className="c-plans-item__prev-price text-sm text-neutral-600 line-through my-1">{`$${plan.prevPrice} antes`}</p> }
           <p className="c-plans-item__price">{`$${plan.price} al mes`}</p>
           <hr className="c-plans-item__line" />
           <ul className="c-plans-item__benefit-container">

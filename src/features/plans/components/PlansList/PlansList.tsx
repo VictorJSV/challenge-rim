@@ -32,6 +32,7 @@ const ConfigBold = [
 
 export interface EnhancedPlan extends Omit<PlanDTO, 'description'> {
   recommended: boolean;
+  prevPrice?: number;
   icon: React.ReactNode;
   description: {
     text: string;
@@ -58,6 +59,7 @@ export const PlanList: React.FC<PlanListProps> = ({ planType, data, isLoading, i
             return {
               ...plan,
               price: plan.price * (planType === 'self' ? 1 : 0.95),
+              prevPrice: planType === 'other' ? plan.price : undefined,
               recommended: plan.name === 'Plan en Casa y Clínica',
               icon:
                 plan.name === 'Plan en Casa y Clínica' ? (
