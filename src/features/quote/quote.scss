@@ -7,7 +7,7 @@
     @apply md:max-w-[22rem];
   }
   &__title {
-    @apply text-2.5xl font-bold mt-2 mb-[3.375rem] max-w-[11.75rem] md:max-w-none md:mt-4 md:mb-2 md:text-3.5xl;
+    @apply text-2.5xl font-bold mt-2 mb-[3.375rem] mr-36 md:mr-0 md:mt-4 md:mb-2 md:text-3.5xl;
   }
   &__divider {
     @apply border-gray-30 w-full md:hidden;
