@@ -4,7 +4,7 @@ import IconPhone from '@src/assets/svgs/icon-phone.svg?react';
 
 export const Header = () => (
   <div className="c-header">
-    <Logo aria-label='Logotipo de Rimac' />
+    <a href="/"><Logo aria-label='Logotipo de Rimac' /></a>
     <div className="c-header__information">
       <p className="c-header__text">¡Compra por este medio!</p>
       <div className="c-header__phone-container">

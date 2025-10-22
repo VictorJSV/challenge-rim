@@ -21,6 +21,9 @@
   &__text-plan {
     @apply text-neutral-600 text-xs tracking-[0.038rem] uppercase mt-[0.625rem] md:mt-0;
   }
+  &__prev-price {
+    @apply text-sm text-neutral-600 line-through my-1;
+  }
   &__price {
     @apply text-xl font-black;
   }

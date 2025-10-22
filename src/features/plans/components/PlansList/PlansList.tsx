@@ -84,7 +84,7 @@ export const PlanList: React.FC<PlanListProps> = ({ planType, data, isLoading, i
         <Carousel>
           {enhancedList().map((plan, i) => (
             <Carousel.Item key={i} index={i} width="304px">
-              <div className="pl-4 py-6 flex md:pt-5 md:pb-0 md:pl-0">
+              <div className="c-plans-list__container-item">
                 <PlansItem key={i} plan={plan} />
               </div>
             </Carousel.Item>
