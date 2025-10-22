@@ -16,7 +16,7 @@ const Summary: React.FC = () => {
   if (!state || !user.name) {
     return (
       <Container>
-        <div className="text-md text-center mt-4">
+        <div className=".c-general-msg">
           Redirigiendo... <Navigate to="/" replace />
         </div>
       </Container>

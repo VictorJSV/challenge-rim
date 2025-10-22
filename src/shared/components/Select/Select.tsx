@@ -63,7 +63,7 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
     };
 
     return (
-      <div className="c-select" aria-haspopup="listbox" aria-expanded={isOpen} ref={wrapperRef}>
+      <div className="c-select" ref={wrapperRef}>
         {label && (
           <label htmlFor={id} className="c-select__label">
             {label}

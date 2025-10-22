@@ -15,8 +15,13 @@ export const schema: yup.ObjectSchema<FormValues> = yup.object({
     .when('docType', {
       is: (value: string) => value === 'DNI',
       then: (schema) =>
-        schema.required('El DNI es requerido').matches(/^[0-9]{8}$/, 'El DNI debe tener 8 dígitos'),
-      otherwise: (schema) => schema.required('El número de documento es requerido'),
+        schema
+          .required('El DNI es requerido')
+          .matches(/^[0-9]{8}$/, 'El DNI debe tener 8 dígitos'),
+      otherwise: (schema) =>
+        schema
+          .required('El número de documento es requerido')
+          .matches(/^[0-9]{6,20}$/, 'El número de documento debe tener entre 6 y 20 dígitos'),
     })
     .defined(),
   cell: yup

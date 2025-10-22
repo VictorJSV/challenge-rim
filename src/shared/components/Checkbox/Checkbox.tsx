@@ -38,6 +38,7 @@ const Checkbox: React.FC<CheckboxProps> = forwardRef<HTMLInputElement, CheckboxP
             aria-invalid={isError}
             aria-checked={checked}
             aria-disabled={disabled}
+            aria-labelledby={`${id}Label`}
             tabIndex={-1}
             role="none"
             {...rest}

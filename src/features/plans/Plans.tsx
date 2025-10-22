@@ -21,7 +21,7 @@ const Plans: React.FC = () => {
   if (!user.name) {
     return (
       <Container>
-        <div className="text-2.5xl text-center mt-4">
+        <div className="c-general-msg">
           Redirigiendo... <Navigate to="/" replace />
         </div>
       </Container>
