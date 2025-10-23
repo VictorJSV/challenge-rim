@@ -1,5 +1,5 @@
 .c-footer {
-  @apply py-8 md:px-6 flex flex-col md:flex-row items-center gap-6 md:justify-between;
+  @apply py-8 flex flex-col md:flex-row items-center gap-6 md:justify-between;
   &__logo {
     @apply hidden md:block;
   }

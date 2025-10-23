@@ -13,19 +13,19 @@ export const QuoteBackground: React.FC = () => {
     <>
       <picture>
         <source srcSet={moleculeBlurRightWebp} type="image/webp" />
-        <img className='c-quote-background__right' src={moleculeBlurRightImg} loading="lazy" aria-hidden='true' />
+        <img className='c-quote-background__right' src={moleculeBlurRightImg} decoding="async" aria-hidden='true' />
       </picture>
       <picture>
         <source srcSet={moleculeBlurLeftWebp} type="image/webp" />
-        <img className='c-quote-background__left' src={moleculeBlurLeftImg} loading="lazy" aria-hidden='true' />
+        <img className='c-quote-background__left' src={moleculeBlurLeftImg} decoding="async" aria-hidden='true' />
       </picture>
       <picture>
         <source srcSet={moleculeBlurMobileRightWebp} type="image/webp" />
-        <img className='c-quote-background__mobile-right' src={moleculeBlurMobileRightImg} loading="lazy" aria-hidden='true' />
+        <img className='c-quote-background__mobile-right' src={moleculeBlurMobileRightImg} decoding="async" aria-hidden='true' />
       </picture>
       <picture>
         <source srcSet={moleculeBlurMobileLeftWebp} type="image/webp" />
-        <img className='c-quote-background__mobile-left' src={moleculeBlurMobileLeftImg} loading="lazy" aria-hidden='true' />
+        <img className='c-quote-background__mobile-left' src={moleculeBlurMobileLeftImg} decoding="async" aria-hidden='true' />
       </picture>
     </>
   );
