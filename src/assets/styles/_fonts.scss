@@ -1,0 +1,99 @@
+@layer base {
+  /* BR Sonoma Font Family */
+  @font-face {
+    font-family: 'BR Sonoma';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url(@assets/fonts/BRSonoma-Thin.otf) format('opentype');
+  }
+
+  @font-face {
+    font-family: 'BR Sonoma';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(@assets/fonts/BRSonoma-Light.otf) format('opentype');
+  }
+
+  @font-face {
+    font-family: 'BR Sonoma';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(@assets/fonts/BRSonoma-Regular.otf) format('opentype');
+  }
+
+  @font-face {
+    font-family: 'BR Sonoma';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(@assets/fonts/BRSonoma-Medium.otf) format('opentype');
+  }
+
+  @font-face {
+    font-family: 'BR Sonoma';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(@assets/fonts/BRSonoma-Semibold.otf) format('opentype');
+  }
+
+  @font-face {
+    font-family: 'BR Sonoma';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(@assets/fonts/BRSonoma-Bold.otf) format('opentype');
+  }
+
+  @font-face {
+    font-family: 'BR Sonoma';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(@assets/fonts/BRSonoma-Black.otf) format('opentype');
+  }
+
+  /* Lato Font Family */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url(@assets/fonts/Lato-Thin.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(@assets/fonts/Lato-Light.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(@assets/fonts/Lato-Regular.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(@assets/fonts/Lato-Bold.ttf) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(@assets/fonts/Lato-Black.ttf) format('truetype');
+  }
+}

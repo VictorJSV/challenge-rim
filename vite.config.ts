@@ -23,13 +23,13 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@styles': '/src/assets/styles',
+      '@assets': '/src/assets',
     }
   },
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "@styles/global.scss" as *;`,
+        additionalData: `@use "@assets/styles/global.scss" as *;`,
         quietDeps: true,
       },
       sass: {

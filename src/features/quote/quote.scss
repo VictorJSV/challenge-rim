@@ -1,5 +1,19 @@
 .c-quote {
-  @apply relative md:flex md:gap-32 pt-8;
+  &__background-right {
+    @apply bg-[url('@assets/images/molecule-blur-right.png')] bg-no-repeat w-[24.5rem] h-[calc(100%+4rem)] absolute right-0 top-[-4rem] z-[-1] hidden md:block;
+  }
+  &__background-left {
+    @apply bg-[url('@assets/images/molecule-blur-left.png')] bg-no-repeat bg-bottom w-[25.75rem] h-full absolute left-0 bottom-0 z-[-1] hidden md:block;
+  }
+  &__background-mobile-right {
+    @apply bg-[url('@assets/images/molecule-blur-mobile-right.png')] bg-no-repeat w-[22rem] h-[calc(100%+3.5rem)] absolute right-0 top-[-3.5rem] z-[-1] block md:hidden;
+  }
+  &__background-mobile-left {
+    @apply bg-[url('@assets/images/molecule-blur-mobile-left.png')] bg-no-repeat bg-bottom w-[16rem] h-full absolute left-0 bottom-0 z-[-1] block md:hidden;
+  }
+  &__container {
+    @apply relative md:flex md:gap-32 pt-8;
+  }
   &__image {
     @apply absolute right-0 top-[0.125rem] w-[8.5rem] md:static md:w-fit md:h-fit;
   }

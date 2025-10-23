@@ -78,6 +78,7 @@ export const QuoteForm: React.FC = () => {
               ]}
               alignToRight
               variant="outlined"
+              aria-label="Documento de identidad"
               {...register('docType')}
             />
             <Input

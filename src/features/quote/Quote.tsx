@@ -8,14 +8,16 @@ import familyMobileWebp from '@src/assets/images/family-mobile.webp';
 import familyMobileAvif from '@src/assets/images/family-mobile.avif';
 import Container from '@src/shared/components/Container/Container';
 import { QuoteForm } from './components/QuoteForm/QuoteForm';
-import { QuoteBackground } from './components/QuoteBackground/QuoteBackground';
 
 const Quote: React.FC = () => {
   return (
-    <>
-      <QuoteBackground />
+    <div className="c-quote">
+      <div className="c-quote__background-right" />
+      <div className="c-quote__background-left" />
+      <div className="c-quote__background-mobile-right" />
+      <div className="c-quote__background-mobile-left" />
       <Container>
-        <div className="c-quote">
+        <div className="c-quote__container">
           <div className="c-quote__image">
             <picture>
               <source srcSet={familyAvif} type="image/avif" />
@@ -27,7 +29,6 @@ const Quote: React.FC = () => {
                 width={480}
                 height={560}
                 fetchPriority="high"
-                loading="lazy"
                 decoding="async"
               />
             </picture>
@@ -41,7 +42,6 @@ const Quote: React.FC = () => {
                 width={136}
                 height={160}
                 fetchPriority="high"
-                loading="lazy"
                 decoding="async"
               />
             </picture>
@@ -58,7 +58,7 @@ const Quote: React.FC = () => {
           </div>
         </div>
       </Container>
-    </>
+    </div>
   );
 };
 
