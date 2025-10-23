@@ -23,6 +23,7 @@ export const QuoteForm: React.FC = () => {
     formState: { errors, isDirty },
     watch,
     reset,
+    getValues
   } = useForm<FormValues>({
     resolver: yupResolver(schema),
     defaultValues: {
@@ -33,13 +34,13 @@ export const QuoteForm: React.FC = () => {
       acceptCom: false,
     },
   });
-  const watchDocType = watch('docType');
+  const docTypeValue = watch("docType");
 
   useEffect(() => {
     if (isDirty) {
-      reset({ docType: watchDocType, docNumber: '', cell: '', acceptPrivacy: false, acceptCom: false });
+      reset({ docType: docTypeValue, docNumber: '', cell: '', acceptPrivacy: false, acceptCom: false });
     }
-  }, [watchDocType]);
+  }, [docTypeValue]);
 
   const onSubmit = async (data: FormValues) => {
     try {
@@ -87,6 +88,7 @@ export const QuoteForm: React.FC = () => {
               isError={!!errors.docNumber}
               variant="outlined"
               alignToLeft
+              maxLength={docTypeValue === 'DNI' ? 8 : 20}
               aria-describedby={errors.docNumber && 'docNumberError'}
               {...register('docNumber')}
             />
@@ -101,6 +103,7 @@ export const QuoteForm: React.FC = () => {
             label="Celular"
             isError={!!errors.cell}
             variant="outlined"
+            maxLength={9}
             aria-describedby={errors.cell && 'cellError'}
             {...register('cell')}
           />

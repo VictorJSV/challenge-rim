@@ -28,6 +28,6 @@ export const schema: yup.ObjectSchema<FormValues> = yup.object({
     .string()
     .required('El celular es requerido')
     .matches(/^[0-9]{9}$/, 'El celular debe tener 9 dígitos'),
-  acceptPrivacy: yup.boolean().oneOf([true], 'El campo es requerido').required(),
-  acceptCom: yup.boolean().oneOf([true], 'El campo es requerido').required(),
+  acceptPrivacy: yup.boolean().oneOf([true], 'Debes aceptar las políticas de privacidad').required(),
+  acceptCom: yup.boolean().oneOf([true], 'Debes aceptar la Política Comunicaciones Comerciales').required(),
 });
